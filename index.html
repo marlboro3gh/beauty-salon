@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Твоя красота</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <!-- лого -->
+    <div class="logo">
+        Твоя <span>красота</span> ✦
+    </div>
+
+    <!-- кнопки в хидере -->
+    <nav>
+        <button class="active" data-page="address">
+            Адрес
+        </button>
+
+        <button data-page="booking">
+            Записаться
+        </button>
+
+        <button data-page="about">
+            Подробнее о сайте
+        </button>
+    </nav>
+
+    <button class="theme" id="themeBtn">
+        Тёмная тема
+    </button>
+
+</header>
+
+
+<!-- мэйн страница -->
+<main>
+
+    <section id="address" class="page active">
+
+        <div class="hero">
+
+            <div>
+
+                <div class="eyebrow">
+                    Салон красоты
+                </div>
+
+                <h1>
+                    Твоя красота —
+                    твоё настроение.
+                </h1>
+
+                <p>
+                    Место, где можно остановиться,
+                    расслабиться и посвятить
+                    немного времени себе.
+                </p>
+
+                <div class="card info">
+
+                    <div class="eyebrow">
+                        Мы ждём вас
+                    </div>
+
+                    <div class="address">
+                        ул. Розовая, дом 17,<br>
+                        г. Цветоград
+                    </div>
+
+                    <p>
+                        (Адрес вымышленный и используется
+                        только для демонстрации сайта.)
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div
+                class="card hero-card"
+                aria-label="Интерьер салона">
+
+                <svg
+                    viewBox="0 0 700 520"
+                    role="img">
+
+                    <defs>
+
+                        <linearGradient
+                            id="wall"
+                            x1="0"
+                            y1="0"
+                            x2="1"
+                            y2="1">
+
+                            <stop
+                                offset="0"
+                                stop-color="#fff1f6"/>
+
+                            <stop
+                                offset="1"
+                                stop-color="#ffd2e3"/>
+
+                        </linearGradient>
+
+                        <linearGradient
+                            id="floor"
+                            x1="0"
+                            y1="0"
+                            x2="0"
+                            y2="1">
+
+                            <stop
+                                offset="0"
+                                stop-color="#e8b3c7"/>
+
+                            <stop
+                                offset="1"
+                                stop-color="#c982a0"/>
+
+                        </linearGradient>
+
+                    </defs>
+
+                    <rect
+                        width="700"
+                        height="520"
+                        fill="url(#wall)"
+                    />
+
+                    <polygon
+                        points="0,360 700,330 700,520 0,520"
+                        fill="url(#floor)"
+                    />
+
+                    <rect
+                        x="45"
+                        y="45"
+                        width="190"
+                        height="225"
+                        rx="12"
+                        fill="#fff"
+                        stroke="#e7a8bf"
+                        stroke-width="7"
+                    />
+
+                    <line
+                        x1="140"
+                        y1="45"
+                        x2="140"
+                        y2="270"
+                        stroke="#e7a8bf"
+                        stroke-width="6"
+                    />
+
+                    <line
+                        x1="45"
+                        y1="155"
+                        x2="235"
+                        y2="155"
+                        stroke="#e7a8bf"
+                        stroke-width="6"
+                    />
+
+                    <circle
+                        cx="560"
+                        cy="115"
+                        r="55"
+                        fill="#ffd4e3"
+                    />
+
+                    <circle
+                        cx="560"
+                        cy="115"
+                        r="35"
+                        fill="#fff"
+                    />
+
+                    <rect
+                        x="300"
+                        y="100"
+                        width="170"
+                        height="235"
+                        rx="20"
+                        fill="#f4b5cc"
+                    />
+
+                    <rect
+                        x="323"
+                        y="122"
+                        width="124"
+                        height="135"
+                        rx="12"
+                        fill="#fff9fb"
+                    />
+
+                    <circle
+                        cx="385"
+                        cy="177"
+                        r="34"
+                        fill="#f7c0d3"
+                    />
+
+                    <path
+                        d="M360 177 Q385 145 410 177"
+                        fill="none"
+                        stroke="#9b5572"
+                        stroke-width="8"
+                    />
+
+                    <rect
+                        x="330"
+                        y="270"
+                        width="110"
+                        height="45"
+                        rx="12"
+                        fill="#d8789e"
+                    />
+
+                    <rect
+                        x="280"
+                        y="350"
+                        width="220"
+                        height="34"
+                        rx="17"
+                        fill="#8c5069"
+                    />
+
+                    <rect
+                        x="300"
+                        y="384"
+                        width="20"
+                        height="70"
+                        fill="#6d4053"
+                    />
+
+                    <rect
+                        x="460"
+                        y="384"
+                        width="20"
+                        height="70"
+                        fill="#6d4053"
+                    />
+
+                    <rect
+                        x="80"
+                        y="350"
+                        width="105"
+                        height="80"
+                        rx="14"
+                        fill="#f4adc7"
+                    />
+
+                    <circle
+                        cx="110"
+                        cy="340"
+                        r="35"
+                        fill="#80ad75"
+                    />
+
+                    <circle
+                        cx="155"
+                        cy="330"
+                        r="40"
+                        fill="#91bd84"
+                    />
+
+                    <rect
+                        x="110"
+                        y="400"
+                        width="15"
+                        height="55"
+                        fill="#8b5b45"
+                    />
+
+                    <text
+                        x="350"
+                        y="485"
+                        text-anchor="middle"
+                        fill="#8b4d69"
+                        font-size="25"
+                        font-family="sans-serif"
+                        font-weight="700">
+
+                        ТВОЯ КРАСОТА
+
+                    </text>
+
+                </svg>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+<!-- запись -->
+    <section id="booking" class="page">
+
+        <div class="booking-header">
+
+            <div class="eyebrow">
+                Онлайн-запись
+            </div>
+
+            <h2>
+                Выберите свободный день
+            </h2>
+
+            <p>
+                Нажмите на свободный квадрат —
+                выбранная дата загорится ярко-розовым.
+            </p>
+
+        </div>
+
+
+        <div class="booking">
+
+
+
+            <div class="card calendar">
+
+                <div class="month-head">
+
+                    <button
+                        class="theme"
+                        id="prev">
+                        ←
+                    </button>
+
+                    <h3 id="monthTitle"></h3>
+
+                    <button
+                        class="theme"
+                        id="next">
+                        →
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="months"
+                    id="months">
+                </div>
+
+
+                <div class="week">
+
+                    <div>Пн</div>
+                    <div>Вт</div>
+                    <div>Ср</div>
+                    <div>Чт</div>
+                    <div>Пт</div>
+                    <div>Сб</div>
+                    <div>Вс</div>
+
+                </div>
+
+
+                <div
+                    class="days"
+                    id="days">
+                </div>
+
+            </div>
+
+
+
+            <div class="card note">
+
+                <strong>
+                    Здесь вы можете записаться
+                    на нужный для вас день
+                    (если он будет свободен)
+                </strong>
+
+                <p id="chosen">
+                    Дата пока не выбрана.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section id="about" class="page">
+
+        <div class="card about">
+
+            <div class="eyebrow">
+                О сайте
+            </div>
+
+            <h2>
+                Подробнее о сайте
+            </h2>
+
+            <p>
+                этот сайт сделал
+                <span class="telegram">
+                    @Marlborou3gh (telegram)
+                </span>
+            </p>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+    © 2026 «Твоя красота»
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

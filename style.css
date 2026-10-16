@@ -1,0 +1,532 @@
+:root {
+    --bg: #fff7fa;
+    --surface: #ffffff;
+    --surface2: #ffe8f0;
+
+    --text: #4b2635;
+    --muted: #8d6876;
+
+    --accent: #e83d83;
+    --accent2: #ff72aa;
+
+    --border: #f3c7d7;
+
+    --shadow:
+        0 18px 50px rgba(182, 62, 111, .13);
+}
+
+body.dark {
+    --bg: #24131c;
+    --surface: #351b29;
+    --surface2: #4a2033;
+
+    --text: #fff0f6;
+    --muted: #d6a9bc;
+
+    --accent: #ff4d98;
+    --accent2: #ff82b8;
+
+    --border: #71364f;
+
+    --shadow:
+        0 18px 50px rgba(0, 0, 0, .3);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 10% 0%,
+            var(--surface2),
+            transparent 32%
+        ),
+        var(--bg);
+
+    color: var(--text);
+
+    transition: .3s ease;
+}
+
+header {
+    position: sticky;
+    top: 0;
+
+    z-index: 20;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 16px 5vw;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--surface) 88%,
+            transparent
+        );
+
+    backdrop-filter: blur(16px);
+
+    border-bottom:
+        1px solid var(--border);
+}
+
+.logo {
+    font-weight: 900;
+
+    font-size: 24px;
+
+    letter-spacing: -.7px;
+
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--accent);
+}
+
+nav {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+nav button,
+.theme {
+    border: 0;
+
+    background: transparent;
+
+    color: var(--text);
+
+    padding: 10px 14px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    transition: .2s;
+}
+
+nav button:hover,
+nav button.active {
+    background: var(--surface2);
+
+    color: var(--accent);
+}
+
+.theme {
+    border:
+        1px solid var(--border);
+
+    background: var(--surface);
+}
+
+main {
+    max-width: 1150px;
+
+    margin: auto;
+
+    padding: 55px 5vw 80px;
+}
+
+
+
+.page {
+    display: none;
+
+    animation:
+        fade .35s ease;
+}
+
+.page.active {
+    display: block;
+}
+
+
+@keyframes fade {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+
+.hero {
+    display: grid;
+
+    grid-template-columns:
+        1.1fr .9fr;
+
+    gap: 35px;
+
+    align-items: center;
+
+    min-height: 65vh;
+}
+
+
+.eyebrow {
+    color: var(--accent);
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+}
+
+
+h1 {
+    font-size:
+        clamp(44px, 7vw, 78px);
+
+    line-height: .95;
+
+    margin: 12px 0 22px;
+
+    letter-spacing: -3px;
+}
+
+
+h2 {
+    font-size: 38px;
+
+    margin: 0 0 14px;
+}
+
+
+p {
+    font-size: 18px;
+
+    line-height: 1.65;
+
+    color: var(--muted);
+}
+
+
+.card {
+    background: var(--surface);
+
+    border:
+        1px solid var(--border);
+
+    border-radius: 28px;
+
+    box-shadow: var(--shadow);
+}
+
+
+.hero-card {
+    padding: 18px;
+
+    transform:
+        rotate(1.2deg);
+}
+
+
+.hero-card svg {
+    width: 100%;
+
+    display: block;
+
+    border-radius: 20px;
+}
+
+
+
+.address-layout {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 30px;
+
+    align-items: center;
+}
+
+
+.info {
+    padding: 35px;
+
+    margin-top: 25px;
+}
+
+
+.address {
+    font-size: 25px;
+
+    font-weight: 800;
+
+    color: var(--accent);
+
+    line-height: 1.35;
+}
+
+
+
+.booking-header {
+    margin-bottom: 28px;
+}
+
+
+.booking {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.3fr)
+        minmax(280px, .7fr);
+
+    gap: 30px;
+
+    align-items: start;
+}
+
+
+.calendar {
+    padding: 24px;
+}
+
+
+.month-head {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+
+.month-head h3 {
+    margin: 0;
+
+    font-size: 23px;
+}
+
+
+.months {
+    display: flex;
+
+    gap: 7px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 18px;
+}
+
+
+.months button {
+    border:
+        1px solid var(--border);
+
+    background: var(--surface2);
+
+    color: var(--text);
+
+    padding: 8px 11px;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+}
+
+
+.months button.active {
+    background: var(--accent);
+
+    color: white;
+}
+
+
+
+.week,
+.days {
+    display: grid;
+
+    grid-template-columns:
+        repeat(7, 1fr);
+
+    gap: 7px;
+}
+
+
+.week div {
+    font-size: 12px;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-weight: 800;
+
+    padding: 5px;
+}
+
+
+
+.day {
+    aspect-ratio: 1;
+
+    border:
+        1px solid var(--border);
+
+    background: var(--surface2);
+
+    color: var(--text);
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    font-weight: 700;
+
+    transition: .18s;
+}
+
+
+.day:hover {
+    transform:
+        translateY(-2px);
+
+    border-color:
+        var(--accent);
+}
+
+
+.day.selected {
+    background:
+        var(--accent);
+
+    color: white;
+
+    box-shadow:
+        0 0 18px
+        rgba(232, 61, 131, .55);
+
+    border-color:
+        var(--accent);
+}
+
+
+.day.empty {
+    visibility: hidden;
+
+    cursor: default;
+}
+
+
+
+.note {
+    padding: 30px;
+
+    position: sticky;
+
+    top: 100px;
+}
+
+
+.note strong {
+    font-size: 22px;
+}
+
+
+
+.about {
+    max-width: 760px;
+
+    margin: auto;
+
+    padding: 55px;
+
+    text-align: center;
+}
+
+
+.telegram {
+    color: var(--accent);
+
+    font-weight: 900;
+}
+
+
+
+footer {
+    text-align: center;
+
+    color: var(--muted);
+
+    padding: 25px;
+
+    border-top:
+        1px solid var(--border);
+}
+
+
+
+@media (max-width: 800px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    nav {
+        order: 3;
+
+        width: 100%;
+    }
+
+    .hero,
+    .address-layout,
+    .booking {
+        grid-template-columns: 1fr;
+    }
+
+    .note {
+        position: static;
+    }
+
+}
